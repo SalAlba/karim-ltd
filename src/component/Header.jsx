@@ -1,4 +1,21 @@
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Star,
+  Wrench,
+  Car,
+  Shield,
+  Award,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+
 const Header = () => {
+  const callUs = () => {
+    window.location.href = "tel:+447450446551";
+  };
+
   return (
     <header>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -35,11 +52,13 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <form className="d-flex">
-              <button className="btn btn-outline-success" type="submit">
-                Call us!
-              </button>
-            </form>
+            <button
+              className="btn btn btn-warning btn-lg px-4"
+              onClick={callUs}
+            >
+              <Phone className="text-black" size={32} />
+              <span>+44 7450 446551</span>
+            </button>
           </div>
         </div>
       </nav>
