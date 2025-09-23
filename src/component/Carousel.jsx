@@ -1,131 +1,151 @@
+import React, { useState, useEffect } from "react";
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Star,
+  Wrench,
+  Car,
+  Shield,
+  Award,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+
 const Carousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(1);
+
+  const heroSlides = [
+    {
+      title: "Expert Car Repairs & Servicing",
+      description:
+        "Trusted mechanical services across the UK. From routine maintenance to complex repairs, we keep your vehicle running smoothly.",
+      gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+      icon: Car,
+    },
+    {
+      title: "MOT Testing & Certification",
+      description:
+        "DVSA approved testing centre. Quick, thorough MOT tests with same-day results and immediate repairs if needed.",
+      gradient: "linear-gradient(135deg, #134e5e 0%, #71b280 100%)",
+      icon: Shield,
+    },
+    {
+      title: "24/7 Emergency Breakdown",
+      description:
+        "Stranded? Our mobile mechanics provide roadside assistance and emergency repairs across the UK, day or night.",
+      gradient: "linear-gradient(135deg, #c31432 0%, #240b36 100%)",
+      icon: Wrench,
+    },
+  ];
+
+  useEffect(() => {
+    const heroInterval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+
+    // const testimonialInterval = setInterval(() => {
+    //   setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    // }, 4000);
+
+    return () => {
+      clearInterval(heroInterval);
+      // clearInterval(testimonialInterval);
+    };
+  }, [heroSlides.length]);
+
+  const nextSlide = () =>
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  const prevSlide = () =>
+    setCurrentSlide(
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
+    );
+  // const nextTestimonial = () => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  // const prevTestimonial = () => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+
   return (
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
+    <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
+      {/* === indicators === */}
+      <div className="carousel-indicators">
+        {heroSlides.map((_, index) => {
+          return (
+            <button
+              key={index}
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to={index}
+              className={index === currentSlide ? "active" : ""}
+              aria-current={index === currentSlide ? "true" : ""}
+              aria-label={`Slide ${index + 1}`}
+            />
+          );
+        })}
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg
-            class="bd-placeholder-img"
-            width="100%"
-            height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
 
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>Example headline.</h1>
-              <p>
-                Some representative placeholder content for the first slide of
-                the carousel.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">
-                  Sign up today
-                </a>
-              </p>
+      {/* === inner === */}
+      <div className="carousel-inner">
+        {heroSlides.map((slide, index) => {
+          const IconComponent = slide.icon;
+          return (
+            <div
+              key={index}
+              className={`carousel-item ${
+                index === currentSlide ? "active" : ""
+              }`}
+              style={{
+                background: slide.gradient,
+                minHeight: "400px",
+                color: "#fff",
+                transition: "opacity 0.5s ease-in-out",
+              }}
+            >
+              <div className="container h-100 d-flex align-items-center">
+                <div className="row w-100">
+                  <div className="col-lg-6">
+                    <h1 className="display-4 fw-bold mb-4">{slide.title}</h1>
+                    <p className="lead mb-4">{slide.description}</p>
+                    <div className="d-flex gap-3">
+                      <button className="btn btn-warning btn-lg px-4">
+                        Book Service
+                      </button>
+                      <button className="btn btn-outline-light btn-lg px-4">
+                        Call Now
+                      </button>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
+                    <IconComponent
+                      size={200}
+                      className="text-warning opacity-75"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg
-            class="bd-placeholder-img"
-            width="100%"
-            height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
-
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>
-                Some representative placeholder content for the second slide of
-                the carousel.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">
-                  Learn more
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg
-            class="bd-placeholder-img"
-            width="100%"
-            height="100%"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
-
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
-              <p>
-                Some representative placeholder content for the third slide of
-                this carousel.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">
-                  Browse gallery
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
+
+      {/* === buttons === */}
       <button
-        class="carousel-control-prev"
+        className="carousel-control-prev"
         type="button"
         data-bs-target="#myCarousel"
         data-bs-slide="prev"
+        onClick={prevSlide}
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
       </button>
       <button
-        class="carousel-control-next"
+        className="carousel-control-next"
         type="button"
         data-bs-target="#myCarousel"
         data-bs-slide="next"
+        onClick={nextSlide}
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
       </button>
     </div>
   );
