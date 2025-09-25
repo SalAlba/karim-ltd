@@ -12,13 +12,17 @@ import {
 } from "lucide-react";
 
 const Main = () => {
+  const onAccidentManagement = () => {
+    alert("Accident Management Clicked");
+  };
+
   return (
     <div className="container marketing">
       {/* <!-- Three columns of text below the carousel --> */}
       <div className="row">
         <div className="col-lg-4">
           <img
-            src="https://www.drewmotive.com/auto-repair/images/antique-auto-repair-4.jpg"
+            src="https://production-content-assets.ratecity.com.au/20221213/car-crash-4MFvEQmEB.jpg"
             alt="Antique Auto Repair"
             className="bd-placeholder-img rounded-circle"
             width="140"
@@ -26,15 +30,16 @@ const Main = () => {
             style={{ objectFit: "cover" }}
           />
 
-          <h2>Service 1</h2>
+          <h2>Accident Management</h2>
           <p>
-            Some representative placeholder content for the three columns of
-            text below the carousel. This is the first column.
+            We handle the entire process after an accident, from recovery and
+            repairs to dealing with insurers and providing courtesy vehicles.
+            Let us take the stress out of getting you back on the road.
           </p>
           <p>
-            <a className="btn btn-secondary" href="#">
-              View details &raquo;
-            </a>
+            <button className="btn btn-warning" onClick={onAccidentManagement}>
+              Give details here
+            </button>
           </p>
         </div>
         {/* <!-- /.col-lg-4 --> */}
@@ -48,21 +53,23 @@ const Main = () => {
             style={{ objectFit: "cover" }}
           />
 
-          <h2>Service 2</h2>
+          <h2>Bodywork</h2>
           <p>
-            Another exciting bit of representative placeholder content. This
-            time, we've moved on to the second column.
+            Our body shop has many years of experience in repair and
+            customisation. We can accommodate any repair or customisation
+            requests you may have. We request you come in and have a chat with
+            us with no commitment needed, we are happy to help!
           </p>
-          <p>
+          {/* <p>
             <a className="btn btn-secondary" href="#">
               View details &raquo;
             </a>
-          </p>
+          </p> */}
         </div>
         {/* <!-- /.col-lg-4 --> */}
         <div className="col-lg-4">
           <img
-            src="https://www.drewmotive.com/auto-repair/images/antique-auto-repair-4.jpg"
+            src="https://resources.servicemycar.com/upimages/blogs/Full-Car-Servicing-at-Service-My-Car-20231011123729.webp"
             alt="Antique Auto Repair"
             className="bd-placeholder-img rounded-circle"
             width="140"
@@ -70,15 +77,11 @@ const Main = () => {
             style={{ objectFit: "cover" }}
           />
 
-          <h2>Service 3</h2>
+          <h2>Basic service</h2>
           <p>
-            And lastly this, the third column of representative placeholder
-            content.
-          </p>
-          <p>
-            <a className="btn btn-secondary" href="#">
-              View details &raquo;
-            </a>
+            Our basic service includes oil and filter change, fluid top-ups, and
+            a comprehensive vehicle health check to keep your car running
+            smoothly and reliably.
           </p>
         </div>
         {/* <!-- /.col-lg-4 --> */}
@@ -91,13 +94,12 @@ const Main = () => {
       <div className="row featurette">
         <div className="col-md-7 order-md-2">
           <h2 className="featurette-heading">
-            Oh yeah, it’s that good.{" "}
-            <span className="text-muted">See for yourself.</span>
+            Accident <span className="text-muted">Management</span>
           </h2>
           <p className="lead">
-            Another featurette? Of course. More placeholder content here to give
-            you an idea of how this layout would work with some actual
-            real-world content in place.
+            We handle the entire process after an accident, from recovery and
+            repairs to dealing with insurers and providing courtesy vehicles.
+            Let us take the stress out of getting you back on the road.
           </p>
         </div>
         <div className="col-md-5 order-md-1">
@@ -160,7 +162,7 @@ const Main = () => {
                 <p className="mb-4">
                   No obligation estimates for all repairs and services
                 </p>
-                <button className="btn btn-warning btn-lg">
+                <button className="btn btn-warning btn-lg" disabled>
                   Request Quote
                 </button>
               </div>

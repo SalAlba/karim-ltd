@@ -5,7 +5,8 @@ const Footer = () => {
         <div className="row align-items-center">
           <div className="col-md-6">
             <p className="mb-0">
-              &copy; {new Date().getFullYear()} Karim UK. All rights reserved.
+              &copy; {new Date().getFullYear()} Karim Liverpool Ltd. All rights
+              reserved.
             </p>
           </div>
           <div className="col-md-6 text-md-end">

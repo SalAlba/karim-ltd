@@ -1,15 +1,4 @@
-import {
-  Phone,
-  MapPin,
-  Clock,
-  Star,
-  Wrench,
-  Car,
-  Shield,
-  Award,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Phone, MapPin, Clock, Mail } from "lucide-react";
 
 const Contact = () => {
   const bookService = () => {
@@ -30,8 +19,9 @@ const Contact = () => {
               Ready to book your service or need emergency assistance?
             </p>
 
+            {/*  */}
             <div className="row g-4">
-              <div className="col-md-4">
+              <div className="col-md-3">
                 <div className="text-center">
                   <Phone className="text-warning mb-3" size={48} />
                   <h5>Call Us</h5>
@@ -40,20 +30,28 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="col-md-4">
+              <div className="col-md-3">
                 <div className="text-center">
-                  <MapPin className="text-warning mb-3" size={48} />
-                  <h5>Visit Us</h5>
-                  <p className="mb-0">
-                    123 High Street
-                    <br />
-                    Birmingham B1 1AA
-                  </p>
-                  <small className="text-muted">Multiple locations</small>
+                  <Mail className="text-warning mb-3" size={48} />
+                  <h5>Email Us</h5>
+                  <p className="mb-0">karimliverpoolltd@gmail.com</p>
                 </div>
               </div>
 
-              <div className="col-md-4">
+              <div className="col-md-3">
+                <div className="text-center">
+                  <MapPin className="text-warning mb-3" size={48} />
+                  <h5>Visit Us</h5>
+                  {/* <p className="mb-0">
+                    123 High Street
+                    <br />
+                    Birmingham B1 1AA
+                  </p> */}
+                  {/* <small className="text-muted">Multiple locations</small> */}
+                </div>
+              </div>
+
+              <div className="col-md-3">
                 <div className="text-center">
                   <Clock className="text-warning mb-3" size={48} />
                   <h5>Opening Hours</h5>
@@ -67,6 +65,7 @@ const Contact = () => {
               </div>
             </div>
 
+            {/*  */}
             <div className="mt-5">
               <button
                 className="btn btn-warning btn-lg me-3"
