@@ -6,7 +6,10 @@ const Contact = () => {
   };
 
   const findLocations = () => {
-    alert("Finding nearest locations...");
+    window.open(
+      "https://www.google.com/maps/search/?api=1&query=259+Mill+Street,+Liverpool,+England+L8+6QN",
+      "_blank"
+    );
   };
 
   return (
@@ -42,12 +45,12 @@ const Contact = () => {
                 <div className="text-center">
                   <MapPin className="text-warning mb-3" size={48} />
                   <h5>Visit Us</h5>
-                  {/* <p className="mb-0">
-                    123 High Street
+                  <p className="mb-0">
+                    259 Mill Street
                     <br />
-                    Birmingham B1 1AA
-                  </p> */}
-                  {/* <small className="text-muted">Multiple locations</small> */}
+                    Liverpool, England L8 6QN
+                  </p>
+                  {/* <small className="text-white">Multiple locations</small> */}
                 </div>
               </div>
 
@@ -60,7 +63,7 @@ const Contact = () => {
                     <br />
                     Sat: 8AM-4PM
                   </p>
-                  <small className="text-muted">Sunday: Emergency only</small>
+                  <small className="text-white">Sunday: Emergency only</small>
                 </div>
               </div>
             </div>
