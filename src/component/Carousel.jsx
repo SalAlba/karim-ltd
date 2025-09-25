@@ -11,9 +11,11 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import ButtonWarningBookService from "../shared/ButtonWarningBookService";
+import ButtonOutlineLightCallNow from "../shared/ButtonOutlineLightCallNow";
 
 const Carousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroSlides = [
     {
@@ -23,13 +25,13 @@ const Carousel = () => {
       gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
       icon: Car,
     },
-    {
-      title: "MOT Testing & Certification",
-      description:
-        "DVSA approved testing centre. Quick, thorough MOT tests with same-day results and immediate repairs if needed.",
-      gradient: "linear-gradient(135deg, #134e5e 0%, #71b280 100%)",
-      icon: Shield,
-    },
+    // {
+    //   title: "MOT Testing & Certification",
+    //   description:
+    //     "DVSA approved testing centre. Quick, thorough MOT tests with same-day results and immediate repairs if needed.",
+    //   gradient: "linear-gradient(135deg, #134e5e 0%, #71b280 100%)",
+    //   icon: Shield,
+    // },
     {
       title: "24/7 Emergency Breakdown",
       description:
@@ -105,12 +107,8 @@ const Carousel = () => {
                     <h1 className="display-4 fw-bold mb-4">{slide.title}</h1>
                     <p className="lead mb-4">{slide.description}</p>
                     <div className="d-flex gap-3">
-                      <button className="btn btn-warning btn-lg px-4">
-                        Book Service
-                      </button>
-                      <button className="btn btn-outline-light btn-lg px-4">
-                        Call Now
-                      </button>
+                      <ButtonWarningBookService />
+                      <ButtonOutlineLightCallNow />
                     </div>
                   </div>
                   <div className="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
