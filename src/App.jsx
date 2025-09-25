@@ -5,6 +5,7 @@ import Carousel from "./component/Carousel";
 import Main from "./component/Main";
 import Contact from "./component/Contact";
 import Footer from "./component/Footer";
+import AuthorFooter from "./component/AuthorFooter";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Main />
       <Contact />
       <Footer />
+      <AuthorFooter />
     </>
   );
 }
