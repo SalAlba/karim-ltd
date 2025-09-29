@@ -1,3 +1,5 @@
+const COMPANY_NUMBER = import.meta.env.VITE_COMPANY_NUMBER;
+
 const Footer = () => {
   return (
     <footer className="bg-secondary text-white py-4">
@@ -10,7 +12,10 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-md-6 text-md-end">
-            <small>Registered in England & Wales | VAT Reg: GB123456789</small>
+            <small>
+              Registered in England & Wales | VAT Reg: GB
+              {COMPANY_NUMBER}
+            </small>
           </div>
         </div>
         <div className="row">
