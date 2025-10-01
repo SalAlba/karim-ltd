@@ -131,9 +131,9 @@ const AccidentManagementForm = () => {
             <p>
               We have received your accident details and will be in touch soon.
             </p>
-            <Button variant="warning" onClick={() => navigate("/")}>
+            <a className="btn btn-warning" variant="warning" href="/karim-ltd/">
               Back to main page
-            </Button>
+            </a>
           </div>
         </div>
       )}
