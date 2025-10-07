@@ -4,6 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-secondary text-white py-4">
       <div className="container">
+        {/*  */}
         <div className="row align-items-center">
           <div className="col-md-6">
             <p className="mb-0">
@@ -18,6 +19,8 @@ const Footer = () => {
             </small>
           </div>
         </div>
+
+        {/*  */}
         <div className="row">
           <div className="col-md-12">
             <p className="float-end">

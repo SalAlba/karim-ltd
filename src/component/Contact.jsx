@@ -24,7 +24,7 @@ const Contact = () => {
 
             {/*  */}
             <div className="row g-4">
-              <div className="col-md-3">
+              <div className="col-md-3 col-sm-6">
                 <div className="text-center">
                   <Phone className="text-warning mb-3" size={48} />
                   <h5>Call Us</h5>
@@ -33,7 +33,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="col-md-3">
+              <div className="col-md-3 col-sm-6">
                 <div className="text-center">
                   <Mail className="text-warning mb-3" size={48} />
                   <h5>Email Us</h5>
@@ -41,7 +41,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="col-md-3">
+              <div className="col-md-3 col-sm-6">
                 <div className="text-center">
                   <MapPin className="text-warning mb-3" size={48} />
                   <h5>Visit Us</h5>
@@ -54,7 +54,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="col-md-3">
+              <div className="col-md-3 col-sm-6">
                 <div className="text-center">
                   <Clock className="text-warning mb-3" size={48} />
                   <h5>Opening Hours</h5>
