@@ -21,7 +21,7 @@ const Main = () => {
       <div className="container marketing">
         {/* <!-- Three columns of text below the carousel --> */}
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col-lg-6 text-center">
             <img
               src="https://production-content-assets.ratecity.com.au/20221213/car-crash-4MFvEQmEB.jpg"
               alt="Antique Auto Repair"
@@ -44,7 +44,7 @@ const Main = () => {
             </p>
           </div>
           {/* <!-- /.col-lg-4 --> */}
-          <div className="col-lg-4">
+          {/* <div className="col-lg-4">
             <img
               src="https://www.drewmotive.com/auto-repair/images/antique-auto-repair-4.jpg"
               alt="Antique Auto Repair"
@@ -61,14 +61,9 @@ const Main = () => {
               requests you may have. We request you come in and have a chat with
               us with no commitment needed, we are happy to help!
             </p>
-            {/* <p>
-            <a className="btn btn-secondary" href="#">
-              View details &raquo;
-            </a>
-          </p> */}
-          </div>
+          </div> */}
           {/* <!-- /.col-lg-4 --> */}
-          <div className="col-lg-4">
+          <div className="col-lg-6 text-center">
             <img
               src="https://resources.servicemycar.com/upimages/blogs/Full-Car-Servicing-at-Service-My-Car-20231011123729.webp"
               alt="Antique Auto Repair"
@@ -131,7 +126,7 @@ const Main = () => {
                 </p>
 
                 <div className="row g-4">
-                  <div className="col-sm-6">
+                  {/* <div className="col-sm-6">
                     <div className="d-flex align-items-center">
                       <Award className="text-primary me-3" size={32} />
                       <div>
@@ -143,15 +138,13 @@ const Main = () => {
                         </small>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="col-sm-6">
                     <div className="d-flex align-items-center">
                       <Shield className="text-success me-3" size={32} />
                       <div>
-                        <h6 className="mb-1 text-danger">12 Month Warranty</h6>
-                        <small className="text-danger">
-                          On all repairs & parts
-                        </small>
+                        <h6 className="mb-1 ">12 Month Warranty</h6>
+                        <small className="">On all repairs & parts</small>
                       </div>
                     </div>
                   </div>

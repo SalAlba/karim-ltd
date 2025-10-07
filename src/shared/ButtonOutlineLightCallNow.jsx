@@ -1,9 +1,11 @@
+const PHONE = import.meta.env.VITE_PHONE_NUMBER;
+
 const ButtonOutlineLightCallNow = () => {
   return (
     <button
-      className="btn btn-outline-light btn-lg px-4"
+      className="btn btn-warning btn-lg px-4"
       onClick={() => {
-        window.location.href = "tel:+447450446551";
+        window.location.href = "tel:" + PHONE;
       }}
     >
       Call Now

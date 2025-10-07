@@ -19,26 +19,19 @@ const Carousel = () => {
 
   const heroSlides = [
     {
-      title: "Expert Car Repairs & Servicing",
+      title: "The one number you need after an accident",
       description:
-        "Trusted mechanical services across the UK. From routine maintenance to complex repairs, we keep your vehicle running smoothly.",
+        "From recovery to repairs, we handle it all so you can get back on the road stress-free.",
       gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
       icon: Car,
     },
     // {
-    //   title: "MOT Testing & Certification",
+    //   title: "24/7 Emergency Breakdown",
     //   description:
-    //     "DVSA approved testing centre. Quick, thorough MOT tests with same-day results and immediate repairs if needed.",
-    //   gradient: "linear-gradient(135deg, #134e5e 0%, #71b280 100%)",
-    //   icon: Shield,
+    //     "Stranded? Our mobile mechanics provide roadside assistance and emergency repairs across the UK, day or night.",
+    //   gradient: "linear-gradient(135deg, #c31432 0%, #240b36 100%)",
+    //   icon: Wrench,
     // },
-    {
-      title: "24/7 Emergency Breakdown",
-      description:
-        "Stranded? Our mobile mechanics provide roadside assistance and emergency repairs across the UK, day or night.",
-      gradient: "linear-gradient(135deg, #c31432 0%, #240b36 100%)",
-      icon: Wrench,
-    },
   ];
 
   useEffect(() => {
@@ -107,7 +100,7 @@ const Carousel = () => {
                     <h1 className="display-4 fw-bold mb-4">{slide.title}</h1>
                     <p className="lead mb-4">{slide.description}</p>
                     <div className="d-flex gap-3">
-                      <ButtonWarningBookService />
+                      {/* <ButtonWarningBookService /> */}
                       <ButtonOutlineLightCallNow />
                     </div>
                   </div>
@@ -125,26 +118,36 @@ const Carousel = () => {
       </div>
 
       {/* === buttons === */}
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide="prev"
-        onClick={prevSlide}
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide="next"
-        onClick={nextSlide}
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
+      {heroSlides.length > 1 && (
+        <>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="prev"
+            onClick={prevSlide}
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="next"
+            onClick={nextSlide}
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </>
+      )}
     </div>
   );
 };
