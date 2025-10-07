@@ -7,6 +7,8 @@ import Footer from "./component/Footer";
 import AuthorFooter from "./component/AuthorFooter";
 import AccidentManagementForm from "./component/AccidentManagement.jsx";
 import { HashRouter, Routes, Route } from "react-router-dom";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
         <Route
           path="/accident-management"
           element={<AccidentManagementForm />}

@@ -1,4 +1,8 @@
 import { Phone, MapPin, Clock, Mail } from "lucide-react";
+import { formatPhoneNumberUKWithCountryCode } from "./../helpers/formatPhoneNumberUK";
+
+const EMAIL = import.meta.env.VITE_EMAIL;
+const PHONE = import.meta.env.VITE_PHONE;
 
 const Contact = () => {
   const bookService = () => {
@@ -28,8 +32,10 @@ const Contact = () => {
                 <div className="text-center">
                   <Phone className="text-warning mb-3" size={48} />
                   <h5>Call Us</h5>
-                  <p className="mb-0">+44 7450 446551</p>
-                  <small className="text-muted">24/7 Emergency Line</small>
+                  <p className="mb-0">
+                    {formatPhoneNumberUKWithCountryCode(PHONE)}
+                  </p>
+                  {/* <small className="text-mutedx">24/7 Emergency Line</small> */}
                 </div>
               </div>
 
@@ -37,7 +43,7 @@ const Contact = () => {
                 <div className="text-center">
                   <Mail className="text-warning mb-3" size={48} />
                   <h5>Email Us</h5>
-                  <p className="mb-0">karimliverpoolltd@gmail.com</p>
+                  <p className="mb-0">{EMAIL}</p>
                 </div>
               </div>
 

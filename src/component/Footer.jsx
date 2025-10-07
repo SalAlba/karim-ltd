@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const COMPANY_NUMBER = import.meta.env.VITE_COMPANY_NUMBER;
 
 const Footer = () => {
@@ -29,13 +30,13 @@ const Footer = () => {
               </a>
             </p>
             <p>
-              <a className="text-white" href="#">
+              <Link className="text-white" to="/privacy">
                 Privacy
-              </a>{" "}
+              </Link>{" "}
               &middot;{" "}
-              <a className="text-white" href="#">
+              <Link className="text-white" to="/terms">
                 Terms
-              </a>
+              </Link>
             </p>
           </div>
         </div>

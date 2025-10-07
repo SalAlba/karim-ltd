@@ -1,19 +1,11 @@
-import {
-  Phone,
-  MapPin,
-  Clock,
-  Star,
-  Wrench,
-  Car,
-  Shield,
-  Award,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Phone } from "lucide-react";
+import { formatPhoneNumberUKWithCountryCode } from "./../helpers/formatPhoneNumberUK";
+
+const PHONE = import.meta.env.VITE_PHONE;
 
 const Header = () => {
   const callUs = () => {
-    window.location.href = "tel:+447450446551";
+    window.location.href = "tel:" + PHONE;
   };
 
   return (
@@ -61,7 +53,7 @@ const Header = () => {
               onClick={callUs}
             >
               <Phone className="text-black" size={32} />
-              <span>+44 7450 446551</span>
+              <span>{formatPhoneNumberUKWithCountryCode(PHONE)}</span>
             </button>
           </div>
         </div>
