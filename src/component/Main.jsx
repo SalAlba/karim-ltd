@@ -44,7 +44,7 @@ const Main = () => {
             </p>
           </div>
           {/* <!-- /.col-lg-4 --> */}
-          {/* <div className="col-lg-4">
+          <div className="col-lg-6 text-center">
             <img
               src="https://www.drewmotive.com/auto-repair/images/antique-auto-repair-4.jpg"
               alt="Antique Auto Repair"
@@ -61,9 +61,9 @@ const Main = () => {
               requests you may have. We request you come in and have a chat with
               us with no commitment needed, we are happy to help!
             </p>
-          </div> */}
+          </div>
           {/* <!-- /.col-lg-4 --> */}
-          <div className="col-lg-6 text-center">
+          {/* <div className="col-lg-6 text-center">
             <img
               src="https://resources.servicemycar.com/upimages/blogs/Full-Car-Servicing-at-Service-My-Car-20231011123729.webp"
               alt="Antique Auto Repair"
@@ -79,7 +79,7 @@ const Main = () => {
               and a comprehensive vehicle health check to keep your car running
               smoothly and reliably.
             </p>
-          </div>
+          </div> */}
           {/* <!-- /.col-lg-4 --> */}
         </div>
         {/* <!-- /.row --> */}
